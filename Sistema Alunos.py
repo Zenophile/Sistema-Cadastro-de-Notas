@@ -1,10 +1,10 @@
 import os
+print('\nBem vindo ao sistema de notas de Alunos\n')
 while True:
-    print('\nBem vindo ao sistema de notas de Alunos\n')
     print('Digite 1 cadastrar um aluno\n')
     print('Digite 2 para mostrar a lista de alunos cadastrados\n')
     print('Digite 3 para escolher um aluno específico\n')
-    print('Digite 4 para cadastrar as notas de um aluno')
+    print('Digite 4 para cadastrar as notas de um aluno\n')
     print('Digite 5 para Sair\n')
     escolha = int(input())
     if escolha == 5:
@@ -63,14 +63,14 @@ while True:
             except FileNotFoundError:
                 print(f"Esse aluno não está cadastrado no sistema.")
         elif escolha == 4:
-            nome_aluno_notas = input('Digite o nome do aluno que você deseja cadastrar as notas')
+            nome_aluno_notas = input('Digite o nome do aluno que você deseja cadastrar as notas\n')
 
-            notas_input = input('Digite as notas do aluno separadas por um espaço, sendo elas respectivamente\n Mat, Geo, Hist, PT, QUI')
+            notas_input = input('Digite as notas do aluno separadas por um espaço, sendo elas respectivamente\n Mat, Geo, Hist, PT, QUI\n')
 
             try:
                 notas = [int(x) for x in notas_input.split()]
             except ValueError:
-                print('Nota inválida, a nota do Aluno deve ser composta por um valor número inteiro, ex: 7')
+                print('Nota inválida, a nota do Aluno deve ser composta por um valor número inteiro, ex: 7\n')
                 exit()
             try:
                 with open(nome_aluno_notas, 'w') as arquivo2:
@@ -83,12 +83,6 @@ while True:
             except FileNotFoundError:
                 print('Esse aluno não se encontra cadastrado em nosso sistema.')
 
-
-
-
         else:
-            print('Opção inválida')
+            print('Opção inválida\n')
             break
-
-#ajustes finais
-
